@@ -40,8 +40,9 @@
             android:src="@drawable/meme"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            app:civ_border_width="3dp"
-            app:civ_border_color="#ffffff"/>
+            app:civ_border_width="5dp"
+            app:civ_border_color="#d35400"
+            />
 
 
         <TextView
@@ -56,6 +57,7 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textSize="23sp"
             android:textColor="#ffffff"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,22 +71,121 @@
 
     </developer.shivam.library.CrescentoContainer>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/pointsImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/asdasd"
-        android:layout_below="@+id/crescentoImageView"
-        android:layout_centerHorizontal="true"
-
-        />
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="1000 points"
-        android:textColor="#ffffff"/>
+        android:layout_below="@+id/crescentoImageView"
+        android:paddingLeft="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/pointsImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/sixty"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:text="Points"
+                android:layout_below="@+id/pointsImg"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/edit"
+                android:id="@+id/editImg"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:paddingTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:text="Edit Profile"
+                android:layout_below="@+id/editImg"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="130dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/portfolioImg"
+                android:layout_width="75dp"
+                android:layout_height="78dp"
+                android:src="@drawable/folder"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Portfolio"
+                android:paddingTop="2dp"
+                android:layout_below="@+id/portfolioImg"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logout"
+                android:id="@+id/logoutImg"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:paddingTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:text="Logout"
+                android:layout_below="@+id/logoutImg"
+                />
+
+
+         </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
 
 
 
