@@ -19,7 +19,7 @@ public class VolunteersController {
     public List<Volunteers> getVolunteers(){
 
         mVolunteers = new ArrayList<>();
-        mVolunteers.add(new Volunteers("Anton Ven Wycoco", "1000 points", R.drawable.ee, R.drawable.e, R.drawable.anton));
+        mVolunteers.add(new Volunteers("Anton Ven Wycoco", "1000 points", R.drawable.numberone, R.drawable.e, R.drawable.anton));
         mVolunteers.add(new Volunteers("Rowan Atkinson", "800 points", R.drawable.e, R.drawable.ee, R.drawable.meme));
         mVolunteers.add(new Volunteers("Charles Cruz", "729 points", R.drawable.e, R.drawable.ee, R.drawable.meme));
         mVolunteers.add(new Volunteers("Kristian Francisco", "700 points", R.drawable.e, R.drawable.ee, R.drawable.meme));

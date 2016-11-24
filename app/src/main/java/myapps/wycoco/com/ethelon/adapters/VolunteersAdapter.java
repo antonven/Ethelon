@@ -1,6 +1,7 @@
 package myapps.wycoco.com.ethelon.adapters;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -78,8 +79,7 @@ public class VolunteersAdapter extends ArrayAdapter<Volunteers> {
                 volunteerName = (TextView)view.findViewById(R.id.nameTxt);
                 volunteerPoints = (TextView)view.findViewById(R.id.pointsTxt);
                 volunteerImg = (ImageView)view.findViewById(R.id.volunteerImage);
-                volunteerBadges = (ImageView)view.findViewById(R.id.volunteerBadge);
-//                volunteerRank = (ImageView)view.findViewById(R.id.rankImg);
+                volunteerRank = (ImageView)view.findViewById(R.id.volunteerRank);
             }
 
     }
