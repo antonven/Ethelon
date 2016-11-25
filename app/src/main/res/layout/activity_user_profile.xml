@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:attribute="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_user_profile"
@@ -10,187 +10,170 @@
     tools:context="myapps.wycoco.com.ethelon.UserProfile">
 
 
-
-    <developer.shivam.library.CrescentoImageView
-        android:id="@+id/crescentoImageView"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:elevation="20dp"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="663dp"
+        attribute:srcCompat="@drawable/profile"
+        android:id="@+id/backgroundImg"
         android:scaleType="centerCrop"
-        attribute:curvature="50dp"
-        attribute:tintMode="manual"
-        attribute:tintColor="#FFFFFF"
-        android:src="@drawable/asdasdasdasd"
-        attribute:tintAlpha="50" />
+        attribute:layout_constraintTop_toTopOf="parent"
+        attribute:layout_constraintLeft_toLeftOf="parent"
+        attribute:layout_constraintBottom_toBottomOf="parent"
+        attribute:layout_constraintRight_toRightOf="parent"
+        attribute:layout_constraintHorizontal_bias="1.0"
+        attribute:layout_constraintVertical_bias="0.0" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/volunteerImage"
+        android:contentDescription="@null"
+        android:src="@drawable/pic"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:layout_height="150dp"
+        android:layout_width="120dp"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        android:layout_marginTop="8dp"
+        attribute:layout_constraintTop_toTopOf="parent" />
 
-    <developer.shivam.library.CrescentoContainer
-        android:id="@+id/crescentoContainer"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:elevation="20dp"
-        attribute:curvature="50dp">
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/meme"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            app:civ_border_width="5dp"
-            app:civ_border_color="#d35400"
-            />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nameText"
-            android:text="Anton Ven Wycoco"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/profile_image"
-            android:textStyle="bold"
-            android:paddingTop="20dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textSize="23sp"
-            android:textColor="#ffffff"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/descriptionText"
-            android:text="Programmer"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/nameText"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textStyle="bold"
-            />
-
-    </developer.shivam.library.CrescentoContainer>
-
-    <LinearLayout
+    <TextView
+        android:text="Anton Ven Wycoco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/crescentoImageView"
-        android:paddingLeft="50dp"
+        android:id="@+id/textView2"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintTop_toBottomOf="@+id/volunteerImage"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="okevinjack@yahoo.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        android:layout_marginTop="8dp"
+        android:weightSum="3"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView4"
+        attribute:layout_constraintBottom_toBottomOf="@+id/backgroundImg"
+        attribute:layout_constraintVertical_bias="0.100000024"
+        android:id="@+id/linearLayout">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+        <ImageView
+            attribute:srcCompat="@drawable/editt"
+            android:id="@+id/imageView14"
             android:layout_weight="1"
-            >
+            android:layout_gravity="center_vertical"
+            android:layout_height="35dp"
+            android:layout_width="10dp" />
 
-            <ImageView
-                android:id="@+id/pointsImg"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/sixty"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"/>
+        <ImageView
+            android:layout_width="10dp"
+            attribute:srcCompat="@drawable/certif"
+            android:id="@+id/imageView15"
+            android:layout_weight="1"
+            android:layout_height="42dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
-                android:text="Points"
-                android:layout_below="@+id/pointsImg"
-                />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/edit"
-                android:id="@+id/editImg"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:paddingTop="30dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
-                android:text="Edit Profile"
-                android:layout_below="@+id/editImg"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="130dp"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/portfolioImg"
-                android:layout_width="75dp"
-                android:layout_height="78dp"
-                android:src="@drawable/folder"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:text="Portfolio"
-                android:paddingTop="2dp"
-                android:layout_below="@+id/portfolioImg"
-                />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logout"
-                android:id="@+id/logoutImg"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:paddingTop="30dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
-                android:text="Logout"
-                android:layout_below="@+id/logoutImg"
-                />
-
-
-         </LinearLayout>
-
-
+        <ImageView
+            attribute:srcCompat="@drawable/papers"
+            android:id="@+id/imageView16"
+            android:layout_weight="1"
+            android:layout_width="10dp"
+            android:layout_height="40dp" />
 
     </LinearLayout>
 
+    <TextView
+        android:text='"Allow the way to your great work to be'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        android:layout_marginTop="32dp"
+        attribute:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        attribute:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_orange_dark"
+        attribute:layout_constraintVertical_bias="0.060000002" />
 
+    <TextView
+        android:text='guided by your service to others."'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:layout_marginTop="8dp"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_orange_dark" />
 
+    <TextView
+        android:text="Cecilia Chapman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        android:layout_marginTop="8dp"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView6"
+        attribute:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        attribute:layout_constraintVertical_bias="0.26"
+        attribute:layout_constraintHorizontal_bias="0.19" />
 
+    <TextView
+        android:text="711-2889 Nulla St."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_marginTop="8dp"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView7"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintHorizontal_bias="0.2"
+        attribute:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        attribute:layout_constraintVertical_bias="0.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 
+    <TextView
+        android:text="Mankato Mississippi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
+        attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
+        attribute:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        attribute:layout_constraintTop_toBottomOf="@+id/textView8"
+        attribute:layout_constraintHorizontal_bias="0.22"
+        attribute:layout_constraintVertical_bias="0.0"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
 
