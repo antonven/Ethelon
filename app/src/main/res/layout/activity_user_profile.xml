@@ -40,7 +40,7 @@
         android:text="Anton Ven Wycoco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/profName"
         attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
         attribute:layout_constraintTop_toBottomOf="@+id/volunteerImage"
         attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
@@ -52,10 +52,11 @@
         android:text="okevinjack@yahoo.com"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4"
+        android:id="@+id/profEmail"
         attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
         attribute:layout_constraintRight_toRightOf="@+id/backgroundImg"
-        attribute:layout_constraintTop_toBottomOf="@+id/textView2" />
+        attribute:layout_constraintTop_toBottomOf="@+id/profName"
+        android:textColor="@android:color/background_light" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -65,7 +66,7 @@
         attribute:layout_constraintLeft_toLeftOf="@+id/backgroundImg"
         android:layout_marginTop="8dp"
         android:weightSum="3"
-        attribute:layout_constraintTop_toBottomOf="@+id/textView4"
+        attribute:layout_constraintTop_toBottomOf="@+id/profEmail"
         attribute:layout_constraintBottom_toBottomOf="@+id/backgroundImg"
         attribute:layout_constraintVertical_bias="0.100000024"
         android:id="@+id/linearLayout">
@@ -75,22 +76,24 @@
             android:id="@+id/imageView14"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:layout_height="35dp"
-            android:layout_width="10dp" />
+            android:layout_width="10dp"
+            android:layout_height="40dp" />
 
         <ImageView
             android:layout_width="10dp"
             attribute:srcCompat="@drawable/certif"
-            android:id="@+id/imageView15"
+            android:id="@+id/profPoints"
+            android:paddingTop="8dp"
             android:layout_weight="1"
-            android:layout_height="42dp" />
+            android:layout_height="55dp" />
 
         <ImageView
             attribute:srcCompat="@drawable/papers"
             android:id="@+id/imageView16"
             android:layout_weight="1"
             android:layout_width="10dp"
-            android:layout_height="40dp" />
+            android:paddingTop="8dp"
+            android:layout_height="52dp" />
 
     </LinearLayout>
 

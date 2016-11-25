@@ -9,70 +9,150 @@
 
     <ListView
         android:layout_width="0dp"
-        android:layout_height="0dp"
 
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         android:id="@+id/listView"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/constraintLayout"
-        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="380dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/blackhd"
+        android:id="@+id/bgImage"
+        android:alpha=".8"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:text="Anton Ven Wycoco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nameTextLdb"
-            android:fontFamily="sans-serif"
-            android:layout_below="@+id/volunteerImage"
-            android:layout_alignRight="@+id/volunteerImage"
-            android:layout_alignEnd="@+id/volunteerImage"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/volunteerImage"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintVertical_bias="0.44"
-            android:textSize="30sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:text="LEADERBOARD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+        android:fontFamily="monospace"
+        app:layout_constraintRight_toRightOf="@+id/bgImage"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintLeft_toLeftOf="@+id/bgImage"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintTop_toTopOf="@+id/bgImage"
+        android:layout_marginTop="16dp" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/volunteerImage"
-            android:layout_height="121dp"
-            android:src="@drawable/anton"
-            android:layout_width="120dp"
-            android:layout_centerHorizontal="true"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="24dp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/leaderImage"
+        android:contentDescription="@null"
+        android:src="@drawable/leader"
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/numberone"
-            android:id="@+id/imageView"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp"
-            app:layout_constraintVertical_bias="0.0" />
-    </android.support.constraint.ConstraintLayout>
+        android:layout_height="150dp"
+        android:layout_width="120dp"
+
+        app:layout_constraintRight_toRightOf="@+id/bgImage"
+        app:layout_constraintBottom_toBottomOf="@+id/bgImage"
+        app:layout_constraintLeft_toLeftOf="@+id/bgImage"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:text="Current Rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        app:layout_constraintLeft_toLeftOf="@+id/bgImage"
+        app:layout_constraintRight_toLeftOf="@+id/leaderImage"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="@+id/bgImage"
+        app:layout_constraintBottom_toBottomOf="@+id/bgImage"
+        app:layout_constraintVertical_bias="0.39"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Points earned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/bgImage"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/leaderImage"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toRightOf="@+id/bgImage"
+        app:layout_constraintBottom_toBottomOf="@+id/bgImage"
+        app:layout_constraintVertical_bias="0.39"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="KRISTIAN FRANCISCO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/leaderImage"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bgImage"
+        app:layout_constraintRight_toRightOf="@+id/bgImage"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="1000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pointsEarned"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintLeft_toRightOf="@+id/leaderImage"
+        app:layout_constraintRight_toRightOf="@+id/bgImage"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.37" />
+
+    <TextView
+        android:text="pts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pts"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/pointsEarned"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/holo_red_light" />
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rank"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintRight_toLeftOf="@+id/leaderImage"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.42" />
+
+    <TextView
+        android:text="st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/st"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintLeft_toRightOf="@+id/rank"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </android.support.constraint.ConstraintLayout>

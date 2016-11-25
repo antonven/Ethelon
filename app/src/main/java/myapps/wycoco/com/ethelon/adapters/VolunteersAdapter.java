@@ -68,7 +68,7 @@ public class VolunteersAdapter extends ArrayAdapter<Volunteers> {
             return convertView;
         }
 
-    private static class ViewHolder{
+    static class ViewHolder{
         TextView volunteerName;
         TextView volunteerPoints;
         ImageView volunteerImg;

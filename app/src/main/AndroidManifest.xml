@@ -21,7 +21,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LeaderBoard" />
         <activity android:name=".adapters.VolunteersAdapter" />
-        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".UserProfile" />
+        <activity android:name=".UnlockItems"></activity>
     </application>
 
 </manifest>
