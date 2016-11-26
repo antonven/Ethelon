@@ -1,5 +1,6 @@
 package myapps.wycoco.com.ethelon;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -26,6 +27,8 @@ public class LeaderBoard extends AppCompatActivity {
         VolunteersController controller = new VolunteersController();
         VolunteersAdapter adapter = new VolunteersAdapter(this, R.layout.list_item_volunteers, controller.getVolunteers());
         listView.setAdapter(adapter);
+
+
     }
 
 
