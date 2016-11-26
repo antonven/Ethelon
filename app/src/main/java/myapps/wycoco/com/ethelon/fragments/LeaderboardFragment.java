@@ -1,4 +1,4 @@
-package myapps.wycoco.com.ethelon;
+package myapps.wycoco.com.ethelon.fragments;
 
 
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import myapps.wycoco.com.ethelon.R;
 import myapps.wycoco.com.ethelon.adapters.VolunteersAdapter;
 import myapps.wycoco.com.ethelon.controllers.VolunteersController;
 
